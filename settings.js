@@ -1,12 +1,13 @@
-//-------------------[ BOT SETTINGS ]------------------// 
+/*
+  project_name : CHXSE-XMD Bot
+  Version : 2.4.0
+  Owner : CHXSE
+  Do Not Clone 
 
-// @project_name : KANGO-XMD 
-// @author : Hector 
-// @telegram : http://t.me/official_kango
-// @github : OfficialKango
-// @whatsapp : +233509977126
 
-//----------------------[ KANGO-XMD ]----------------------//
+*/
+
+//----------------------[ CHXSE-XMD]----------------------//
 
 const fs = require('fs')
 const { color } = require('./lib/color')
@@ -15,58 +16,65 @@ if (fs.existsSync('.env')) require('dotenv').config({ path: __dirname+'/.env' })
 
 //--------------------[ SESSION ID ]----------------------//
 
-global.SESSION_ID = process.env.SESSION_ID || '' 
-//Enter your KANGO-XMD session id here; must start with KANGO~
+global.SESSION_ID = process.env.SESSION_ID || ''
+//Enter your 𝙆𝘼𝙉𝙂𝙊-𝙓𝙈𝘿 session id here; must start with KANGO~
 
 //--------------------[ BOT NAME ]----------------------//
 
-global.botname = process.env.BOT_NAME || 'KANGO-XMD' 
+global.botname = process.env.BOT_NAME || 'CHXSE-XMD' 
 
 //-----------------[ OWNER NUMBER ]------------------//
 
-global.ownernumber = process.env.OWNER_NUMBER || '233509977126' 
-
-//--------------------[ SUDO ]--------------------------//
-
-global.sudo = process.env.SUDO ? process.env.SUDO.split(',') : ['233509977126', '233577860202'];
-// Type additional allowed users here
-//NB: They'll be able to use every functions of the bot without restrictions.
+global.ownernumber = process.env.OWNER_NUMBER || 'KANGO~RvVmQYhL#5yRjQrtaxNBO-cEQlpjVZ6aHl1SOTuCLbZUiDZYdqwM'
 
 //-----------------[ OWNER NAME ]------------------//
 
-global.ownername = process.env.OWNER_NAME || 'Hector Manuel' 
+global.ownername = process.env.OWNER_NAME || 'CHXSE' 
 
 //------------[ STICKER PACKNAME ]-----------------//
 
-global.packname = process.env.STICKER_PACK_NAME || "KANGO-XMD" 
+global.packname = process.env.STICKER_PACK_NAME || "CHXSE-XMD" 
 
 //--------------[ STICKER AUTHOR NAME ]------------//
 
-global.author = process.env.STICKER_AUTHOR_NAME || "Hector" 
+global.author = process.env.STICKER_AUTHOR_NAME || "CHXSE" 
+
+//----------------------[ TIMEZONE ]--------------------//
+
+global.timezones = process.env.TIMEZONE || "Africa/Nigeria" 
+//Don't edit this if you don't know!
 
 //----------------[ GITHUB DATABASE ]-----------------//
 
 global.dbToken = process.env.GITHUB_TOKEN || "";
+// Not really necessary on panels/vps/termux, just put it when bot settings reset when bot restarts.
+
+//Go to https://github.com/settings/tokens, select 'Tokens (classic)', then tap 'Generate new token' and select 'Generate new token (classic)'. Enter any note, choose 'No expiration', and under 'Select scopes', tick 'repo'. Scroll down, generate the token, and copy it. Paste it here. If using a single token for multiple bots, change the owner number to avoid settings mixups.
 
 
 //-----------------[ CONTEXT LINK ]--------------------//
 
-global.plink = process.env.PLINK || "https://youtube.com/@official_manuel"
+global.plink = process.env.PLINK || "https://youtube.com/thechxse"
 
 //------------------[ WATERMARK ]--------------------//
 
-global.wm = process.env.GL_WM || "> ©KANGO-XMD"
+global.wm = process.env.GL_WM || "> ©CHXSE-XMD"
 
 //---------------------[ REPLIES ]-----------------------//
 
 global.mess = { 
   done: '*Done*', 
-  success: '©kango-xmd', 
+  success: '> © CHXSE-XMD', 
   owner: `*You don't have permission to use this command!*`, 
   group: '*This feature becomes available when you use it in a group!*', 
   admin: '*You’ll unlock this feature with me as an admin!*', 
   notadmin: '*This feature will work once you become an admin. A way of ensuring order!*' 
 }
+
+//--------------[ DEVELOPER SETTINGS ]---------------//
+/* Do not change anything here!!! */
+
+//😞 
 
 //--------------------[ WATCHER ]-----------------------//
 
@@ -78,4 +86,4 @@ fs.watchFile(file, () => {
   require(file)
 })
 
-//----------------------[ KANGO-XMD ]----------------------//
+//----------------------[ CHXSE-𝙓𝙈𝘿 ]----------------------//
